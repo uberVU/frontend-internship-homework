@@ -2,37 +2,7 @@ var Grid = require('../src/grid.js');
 
 
 describe('Grid', function() {
-  describe('with one stack', function() {
-    it('should place all items on same row', function() {
-      var grid = new Grid([
-        {id: 1, stack: 1},
-        {id: 2, stack: 1},
-        {id: 3, stack: 1},
-        {id: 4, stack: 1}
-      ]);
-
-      expect(grid).to.have.positions({
-        1: [0, 0, 25, 100],
-        2: [25, 0, 25, 100],
-        3: [50, 0, 25, 100],
-        4: [75, 0, 25, 100],
-      });
-    });
-  });
-
-  it('should place two items on the same row', function() {
-    var grid = new Grid([
-      {id: 1, stack: 1},
-      {id: 2, stack: 2}
-    ]);
-
-    expect(grid).to.have.positions({
-      1: [0, 0, 50, 100],
-      2: [50, 0, 50, 100]
-    });
-  });
-
-  it('should stretch the items horizontally', function() {
+  it('should stretch the stacks horizontally', function() {
     var grid = new Grid([
       {id: 1, stack: 1},
       {id: 2, stack: 1},
@@ -52,7 +22,7 @@ describe('Grid', function() {
     });
   });
 
-  it('should stretch rows', function() {
+  it('should stretch the stacks vertically', function() {
     var grid = new Grid([
       {id: 1, stack: 1},
       {id: 2, stack: 2},
