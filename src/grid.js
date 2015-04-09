@@ -3,7 +3,6 @@ var _ = require('lodash');
 /**
  * @typedef {Object} Item
  * @property {Number} id Unique identifier.
- * @property {String} label The value to display.
  * @property {Number} stack The stack this item is part of.
  */
 
