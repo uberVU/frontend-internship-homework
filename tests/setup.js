@@ -3,12 +3,14 @@ var chai = require('chai'),
 
 
 chai.use(function(_chai) {
-  function _formatPosition(position) {
-    return position[0] + ', ' + position[1] + ', ' +
-        position[2] + ', ' + position[3];
-  }
-
   var Assertion = _chai.Assertion;
+
+  var positionTemplate = _.template(
+          '${ position[0] }, ${ position[1] }, ' +
+          '${ position[1] }, ${ position[2] }'),
+      errTemplate = _.template(
+          'expected item ${ id } to be at position ${ expected }, ' +
+          'but was at position ${ actual }');
 
   Assertion.addMethod('positions', function(expected) {
     /**
@@ -35,20 +37,21 @@ chai.use(function(_chai) {
     new Assertion(_.keys(obj)).to.have.length(_.keys(expected).length);
 
 
-    _.forEach(obj, function(position, ID) {
+    _.forEach(obj, function(actual, ID) {
       new Assertion(expected).to.contain.keys(ID);
-      new Assertion(position).to.be.an('array').and.have.length(4);
-      /*new Assertion(position).to.contain.all.keys(['x', 'y', 'w', 'h']);*/
+      new Assertion(actual).to.be.an('array').and.have.length(4);
 
       var expectedItem = expected[ID],
-          msg = 'expected item to be at position ' +
-                _formatPosition(expectedItem) + ' ' +
-                'but was at position ' + _formatPosition(position);
+          msg = errTemplate({
+            id: ID,
+            expected: positionTemplate({position: expectedItem}),
+            actual: positionTemplate({position: actual})
+          });
 
-      new Assertion(position[0]).to.be.closeTo(expectedItem[0], DELTA, msg);
-      new Assertion(position[1]).to.be.closeTo(expectedItem[1], DELTA, msg);
-      new Assertion(position[2]).to.be.closeTo(expectedItem[2], DELTA, msg);
-      new Assertion(position[3]).to.be.closeTo(expectedItem[3], DELTA, msg);
+      new Assertion(actual[0]).to.be.closeTo(expectedItem[0], DELTA, msg);
+      new Assertion(actual[1]).to.be.closeTo(expectedItem[1], DELTA, msg);
+      new Assertion(actual[2]).to.be.closeTo(expectedItem[2], DELTA, msg);
+      new Assertion(actual[3]).to.be.closeTo(expectedItem[3], DELTA, msg);
     });
   });
 });
