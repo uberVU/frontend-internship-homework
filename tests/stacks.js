@@ -20,22 +20,8 @@ describe('Grid', function() {
     });
   });
 
-  describe('with three stacks', function() {
-    it('should place small stacks next to each other', function() {
-      var grid = new Grid([
-        {id: 1, stack: 1},
-        {id: 2, stack: 2},
-        {id: 3, stack: 3}
-      ]);
-
-      expect(grid).to.have.positions({
-        1: [0, 0, 50, 50],
-        2: [50, 0, 50, 50],
-        3: [0, 50, 50, 50]
-      });
-    });
-
-    it('should place large stacks on separate rows', function() {
+  describe('with 3 stacks x 2 elements', function() {
+    it('should place each stack on a row', function() {
       var grid = new Grid([
         {id: 1, stack: 1},
         {id: 2, stack: 1},
