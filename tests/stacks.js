@@ -2,7 +2,7 @@ var Grid = require('../src/grid.js');
 
 
 describe('Grid', function() {
-  describe('with two stacks', function() {
+  describe('with 2 stacks x 2 elements', function() {
     it('should place each stack on a row', function() {
       var grid = new Grid([
         {id: 1, stack: 1},

@@ -4,7 +4,7 @@ var Grid = require('../src/grid.js'),
 
 describe('Grid', function() {
   describe('with no stacks', function() {
-    it('should place one item fullscreen', function() {
+    it('should place 1 item fullscreen', function() {
       var grid = new Grid([{id: 1, stack: 1}]);
 
       expect(grid).to.have.positions({
@@ -12,7 +12,7 @@ describe('Grid', function() {
       });
     });
 
-    it('should place three items 2 on each row', function() {
+    it('should place 3 items 2 on each row', function() {
       var grid = new Grid([
         {id: 1, stack: 1},
         {id: 2, stack: 2},
@@ -26,7 +26,7 @@ describe('Grid', function() {
       });
     });
 
-    it('should place four items 2 on each row', function() {
+    it('should place 4 items 2 on each row', function() {
       var grid = new Grid([
         {id: 1, stack: 1},
         {id: 2, stack: 2},
@@ -42,7 +42,7 @@ describe('Grid', function() {
       });
     });
 
-    it('should place seven items 3 on each row', function() {
+    it('should place 7 items 3 on each row', function() {
       var grid = new Grid(_.times(7, function(i) {
         return {id: i + 1, stack: i + 1};
       }));
@@ -58,7 +58,7 @@ describe('Grid', function() {
       });
     });
 
-    it('should place nine items 3 on each row', function() {
+    it('should place 9 items 3 on each row', function() {
       var grid = new Grid(_.times(9, function(i) {
         return {id: i + 1, stack: i + 1};
       }));
@@ -76,7 +76,7 @@ describe('Grid', function() {
       });
     });
 
-    it('should place thirteen items 4 on each row', function() {
+    it('should place 13 items 4 on each row', function() {
       var grid = new Grid(_.times(13, function(i) {
         return {id: i + 1, stack: i + 1};
       }));
