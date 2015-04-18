@@ -21,7 +21,7 @@ describe('Grid', function() {
     });
   });
 
-  describe('with 3 stacks x 2 elements', function() {
+  describe('with 3 stacks x 3 elements', function() {
     it('should place each stack on a row', function() {
       var grid = new Grid([
         {id: 1, stack: 1},
