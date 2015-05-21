@@ -7,7 +7,7 @@ chai.use(function(_chai) {
 
   var positionTemplate = _.template(
           '${ position[0] }, ${ position[1] }, ' +
-          '${ position[1] }, ${ position[2] }'),
+          '${ position[2] }, ${ position[3] }'),
       errTemplate = _.template(
           'expected item ${ id } to be at position ${ expected }, ' +
           'but was at position ${ actual }');
