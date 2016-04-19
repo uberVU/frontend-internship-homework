@@ -13,7 +13,7 @@ We are given a list of documents. Each document has a list of collaborators. A
 collaborator can have access to more than one document.
 
 We want to aggregate all of the collaborators for all the documents into a
-single a list os we can make edits easier.
+single a list so we can make edits easier.
 
 ![selection](imgs/filter.png)
 
