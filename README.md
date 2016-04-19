@@ -65,6 +65,10 @@ type will only be shared to collaborators that know how to handle that type of
 document. There can't be 2 documents with different types being shared to the
 same person.
 
+To know if a collaborator can handle a certain type of document you'll have to
+look what documents they currently have access to. There won't be cases where
+you'll receive collaborators that don't belong to any document.
+
 Enhance the functions above so that a collaborator is marked as fully selected
 if has access to all of the documents of the type it knows how to handle.
 Consequently, a collaborator is marked as partially checked if they only have
