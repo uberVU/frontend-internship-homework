@@ -19,10 +19,10 @@ single a list so we can make edits easier.
 
 Each collaborator in that list will have an attribute marking if they have
 access to all of the documents, none of them, or some of them. A collaborator
-has access to all of the documents is marked as checked. A collaborator that has
-access only to some of them is also marked as checked, but with a partial
-checkmark. A collaborator that doesn't have access to anything is marked as
-unchecked.
+that has access to all of the documents is marked as checked. A collaborator
+that has access only to some of them is also marked as checked, but with a
+partial checkmark. A collaborator that doesn't have access to anything is marked
+as unchecked.
 
 You can check and uncheck collaborators in this aggregated list. A checked
 collaborator can turn unchecked. An unchecked collaborator can turn checked. A
