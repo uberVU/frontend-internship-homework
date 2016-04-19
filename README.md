@@ -15,7 +15,7 @@ collaborator can have access to more than one document.
 We want to aggregate all of the collaborators for all the documents into a
 single a list os we can make edits easier.
 
-![selection](imgs/base.png)
+![selection](imgs/filter.png)
 
 Each collaborator in that list will have an attribute marking if they have
 access to all of the documents, none of them, or some of them. A collaborator
