@@ -71,9 +71,22 @@ be marked as unchecked if they don't have access to anything.
 
 #### Setup
 
-Make sure you have [node](https://nodejs.org/download/) and
+Make sure you have the latest [node](https://nodejs.org/download/) and
 [npm](https://docs.npmjs.com/getting-started/installing-node) installed and run
 `npm install` to install the dependencies necessary for this project.
+
+You can write your solutions using [ES6 syntax](http://es6-features.org/), but
+you don't need to. ES6 is backwards compatible with current JavaScript syntax
+and adds mostly syntactic sugar on top of it.
+
+The code is transpiled using [BabelJS](https://babeljs.io/). While the latest
+Node [supports](https://kangax.github.io/compat-table/es6/) some of the new ES6
+syntax, BabelJS has much broader support.
+
+We've already installed [lodash](https://lodash.com/docs) for you so feel free
+to use it. You can install any other packages you need, just make sure you add
+them to the `package.json` file by using `--save` or `--save-dev` during [`npm
+install`](https://docs.npmjs.com/cli/install).
 
 
 #### Testing
