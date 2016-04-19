@@ -1,7 +1,7 @@
 {
-  "name": "frontend-internship-homework-2015",
-  "version": "0.0.1",
-  "description": "Homework for the Hootsuite frontend 2015 internship positions.",
+  "name": "frontend-internship-homework",
+  "version": "2016.0.0",
+  "description": "Homework for the Hootsuite frontend internship positions",
   "main": "src/grid.js",
   "directories": {
     "test": "tests"
