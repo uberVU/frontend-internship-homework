@@ -82,23 +82,6 @@ describe('SharingFilter', function() {
           documents[3]
         ]);
       });
-
-      it('should give access to all the documents of a certain type to a ' +
-         'fully selected collaborator', function() {
-        const sharing = new SharingFilter([
-          Object.assign({}, documents[0], {collaborators: [Bob.id]}),
-          ...documents.slice(1)
-        ], [Bob]);
-
-        expect(sharing.updateDocuments([
-          Object.assign({}, Bob, {selected: true, partial: false})
-        ])).to.deep.equal([
-          Object.assign({}, documents[0], {collaborators: [Bob.id]}),
-          documents[1],
-          Object.assign({}, documents[2], {collaborators: [Bob.id]}),
-          documents[3]
-        ]);
-      });
     });
   });
 });
