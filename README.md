@@ -39,17 +39,20 @@ When submitting the modified list, the following will happen:
 
 ## Solution
 
+Add your code in [`src/sharing.js`](src/sharing.js).
+
+
 ### Step 1
 
-Implement a function, `aggregateCollaboratorPermissions`, that will receive a
+Implement a method, `aggregateCollaboratorPermissions`, that will receive a
 list of documents and will return the aggregated list of collaborators.
 
 
 ### Step 2
 
-Implement a function, `updateDocuments`, that will receive the same list of
+Implement a method, `updateDocuments`, that will receive the same list of
 documents and an aggregated list of collaborators. It will return a new list of
-documents with their updated lists of collaborators. The function will respect
+documents with their updated lists of collaborators. The method will respect
 the rules in the `Deliverables` section.
 
 
