@@ -8,7 +8,7 @@ describe('SharingFilter', function() {
   };
 
   const Andy = {
-    id: 1,
+    id: 2,
     name: 'Andy'
   };
 
